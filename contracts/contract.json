@@ -1,0 +1,25 @@
+{
+  "slug": "example",
+  "type": "sw.image.overlay",
+  "name": "Example balenaOS overlay block",
+  "version": "1.0.0",
+  "data": {
+    "store": "data",
+    "reboot-required": "1"
+   },
+  "requires": [
+    {
+      "or": [
+        { "type": "hw.device-type", "slug": "raspberrypi4-64" }
+      ],
+      "or": [
+        { "type": "sw.os.balenaos", "version": "2.x" }
+      ]
+    }
+  ],
+  "composedOf": {
+	"packages": [
+		"os-version"
+	  ]
+  }
+}
